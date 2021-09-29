@@ -1,0 +1,199 @@
+/* ----- Seletor Mundial -----*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ----- header -----*/
+.header{
+    background: rgb(26, 26, 49);
+    padding: 20px 0 150px 0;
+    text-align: center;
+}
+/* ----- main -----*/
+body{
+    background: rgb(235, 235, 235);
+}
+/* ----- container -----*/
+.container{
+    width: min(90vw,800px);
+    margin: 0 auto;
+    margin-top: -50px;
+}
+/* ----- sr-only -----*/
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1rem;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+
+}
+/* ----- cards -----*/
+.card{
+    background: white;
+    max-width: 800px;
+    margin: 0 0 24px 12px;
+    border-radius: 4px;
+    padding: 20px ;
+    
+}
+.green{
+    background: rgb(9, 139, 9);
+    color: white;
+}
+.card h3{
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card p{
+    font-size: 2em;
+    font-weight: normal;
+    margin-top: 10px;
+}
+/* ----- transaction -----*/
+.transaction{
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+}
+.transaction a{
+    color:  rgb(9, 139, 9);
+    font-weight: normal;
+    font-size: .9em;
+}
+.transaction a:hover{
+    color:  rgb(16, 219, 16);
+}
+/* ----- data-table -----*/
+.data-table{
+    width: 100%;
+    border-spacing: 0 1rem;
+}
+/* ----- th -----*/
+table th{
+    text-align: left;
+    font-weight: normal;
+    padding: 1.8rem;
+    background: white;
+    border-radius: 0.25rem;   
+}
+/* ----- expense -----*/
+.expense{
+    color: red;
+}
+/* ----- income -----*/
+.income{
+    color: green;
+}
+/* ----- footer -----*/
+footer p{
+    text-align: center;
+    padding: 20px 0;
+}
+/* ----- td -----*/
+table td{
+    border-radius: 0.25rem;
+    padding: 1.5em;
+    background: white
+}
+.minus{
+    cursor: pointer;
+}
+#incomeDisplay{
+    color: rgb(68, 192, 68);
+}
+#expenseDisplay{
+    color: rgb(204, 64, 64);
+}
+/* ----- Responsivo -----*/
+@media(min-width:800px){
+    .balance{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+
+/* ----- modal-overlay -----*/
+.modal-overlay{
+    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modal-overlay.active{
+    display: flex;
+}
+.modal{
+    background: rgb(235, 235, 235);
+    width: 480px;
+    padding: 40px;
+    border-radius: 4px;
+}
+.modal h2{
+    font-weight: normal;
+}
+label{
+    display: flex;
+}
+input{
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    margin-top: 15px;
+}
+span{
+    font-size: .7em;
+    color: rgb(78, 78, 78);
+}
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.btn-red{
+    background: rgb(235, 235, 235);
+    padding: 10px 0;
+    width: 40%;
+    color: rgb(240, 83, 83);
+    border:2px solid  rgb(240, 83, 83);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-red:hover{
+    color: red;
+    border:2px solid  red;
+
+}
+.btn-green{
+    background: rgb(235, 235, 235);
+    padding: 10px 0;
+    width: 40%;
+    color: rgb(9, 139, 9);
+    border:2px solid  rgb(9, 139, 9);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-green:hover{
+    color: rgb(15, 231, 15);
+    border:2px solid  rgb(15, 231, 15);
+
+}
